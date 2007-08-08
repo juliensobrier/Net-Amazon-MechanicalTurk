@@ -1,0 +1,144 @@
+---
+name: Net-Amazon-MechanicalTurk
+version: 1.0
+author: []
+abstract: Amazon Mechanical Turk SDK for Perl
+license: open_source
+build_requires:
+  Digest::HMAC_SHA1: 0
+  LWP: 0
+  MIME::Base64: 0
+  Test::More: 0
+  URI::Escape: 0
+  XML::Parser: 0
+  perl: 5.6.0
+recommends:
+  IO::String: 0
+provides:
+  Net::Amazon::MechanicalTurk:
+    file: lib/Net/Amazon/MechanicalTurk.pm
+    version: 1.00
+  Net::Amazon::MechanicalTurk::BaseObject:
+    file: lib/Net/Amazon/MechanicalTurk/BaseObject.pm
+    version: 1.00
+  Net::Amazon::MechanicalTurk::BulkSupport:
+    file: lib/Net/Amazon/MechanicalTurk/BulkSupport.pm
+    version: 1.00
+  Net::Amazon::MechanicalTurk::Command::AddRetry:
+    file: lib/Net/Amazon/MechanicalTurk/Command/AddRetry.pm
+    version: 1.00
+  Net::Amazon::MechanicalTurk::Command::DeleteHIT:
+    file: lib/Net/Amazon/MechanicalTurk/Command/DeleteHIT.pm
+    version: 1.00
+  Net::Amazon::MechanicalTurk::Command::GetAvailableBalance:
+    file: lib/Net/Amazon/MechanicalTurk/Command/GetAvailableBalance.pm
+    version: 1.00
+  Net::Amazon::MechanicalTurk::Command::GetHITTypeURL:
+    file: lib/Net/Amazon/MechanicalTurk/Command/GetHITTypeURL.pm
+    version: 1.00
+  Net::Amazon::MechanicalTurk::Command::ListOperations:
+    file: lib/Net/Amazon/MechanicalTurk/Command/ListOperations.pm
+    version: 1.00
+  Net::Amazon::MechanicalTurk::Command::LoadHITs:
+    file: lib/Net/Amazon/MechanicalTurk/Command/LoadHITs.pm
+    version: 1.00
+  Net::Amazon::MechanicalTurk::Command::ParseAssignmentAnswer:
+    file: lib/Net/Amazon/MechanicalTurk/Command/ParseAssignmentAnswer.pm
+    version: 1.00
+  Net::Amazon::MechanicalTurk::Command::RetrieveResults:
+    file: lib/Net/Amazon/MechanicalTurk/Command/RetrieveResults.pm
+    version: 1.00
+  Net::Amazon::MechanicalTurk::Command::SetQuestionPostValidationOnError:
+    file: lib/Net/Amazon/MechanicalTurk/Command/SetQuestionPostValidationOnError.pm
+    version: 1.00
+  Net::Amazon::MechanicalTurk::Command::UpdateHITs:
+    file: lib/Net/Amazon/MechanicalTurk/Command/UpdateHITs.pm
+    version: 1.00
+  Net::Amazon::MechanicalTurk::Configurer:
+    file: lib/Net/Amazon/MechanicalTurk/Configurer.pm
+    version: 1.00
+  Net::Amazon::MechanicalTurk::Constants:
+    file: lib/Net/Amazon/MechanicalTurk/Constants.pm
+    version: 1.00
+  Net::Amazon::MechanicalTurk::DataStructure:
+    file: lib/Net/Amazon/MechanicalTurk/DataStructure.pm
+    version: 1.00
+  Net::Amazon::MechanicalTurk::DelimitedReader:
+    file: lib/Net/Amazon/MechanicalTurk/DelimitedReader.pm
+    version: 1.00
+  Net::Amazon::MechanicalTurk::DelimitedWriter:
+    file: lib/Net/Amazon/MechanicalTurk/DelimitedWriter.pm
+    version: 1.00
+  Net::Amazon::MechanicalTurk::FilterChain:
+    file: lib/Net/Amazon/MechanicalTurk/FilterChain.pm
+    version: 1.00
+  Net::Amazon::MechanicalTurk::IOUtil:
+    file: lib/Net/Amazon/MechanicalTurk/IOUtil.pm
+    version: 1.00
+  Net::Amazon::MechanicalTurk::ModuleUtil:
+    file: lib/Net/Amazon/MechanicalTurk/ModuleUtil.pm
+    version: 1.00
+  Net::Amazon::MechanicalTurk::OSUtil:
+    file: lib/Net/Amazon/MechanicalTurk/OSUtil.pm
+    version: 1.00
+  Net::Amazon::MechanicalTurk::PagedResultsIterator:
+    file: lib/Net/Amazon/MechanicalTurk/PagedResultsIterator.pm
+    version: 1.00
+  Net::Amazon::MechanicalTurk::Properties:
+    file: lib/Net/Amazon/MechanicalTurk/Properties.pm
+    version: 1.00
+  Net::Amazon::MechanicalTurk::QAPValidator:
+    file: lib/Net/Amazon/MechanicalTurk/QAPValidator.pm
+    version: 1.00
+  Net::Amazon::MechanicalTurk::QAPValidator::QAPValidatorMSXML:
+    file: lib/Net/Amazon/MechanicalTurk/QAPValidator/QAPValidatorMSXML.pm
+    version: 1.00
+  Net::Amazon::MechanicalTurk::QuestionFormAnswers:
+    file: lib/Net/Amazon/MechanicalTurk/QuestionFormAnswers.pm
+    version: 1.00
+  Net::Amazon::MechanicalTurk::Response:
+    file: lib/Net/Amazon/MechanicalTurk/Response.pm
+    version: 1.00
+  Net::Amazon::MechanicalTurk::RowData:
+    file: lib/Net/Amazon/MechanicalTurk/RowData.pm
+    version: 1.00
+  Net::Amazon::MechanicalTurk::RowData::ArrayHashRowData:
+    file: lib/Net/Amazon/MechanicalTurk/RowData/ArrayHashRowData.pm
+    version: 1.00
+  Net::Amazon::MechanicalTurk::RowData::DelimitedRowData:
+    file: lib/Net/Amazon/MechanicalTurk/RowData/DelimitedRowData.pm
+    version: 1.00
+  Net::Amazon::MechanicalTurk::RowData::SQLRowData:
+    file: lib/Net/Amazon/MechanicalTurk/RowData/SQLRowData.pm
+    version: 1.00
+  Net::Amazon::MechanicalTurk::RowData::SubroutineRowData:
+    file: lib/Net/Amazon/MechanicalTurk/RowData/SubroutineRowData.pm
+    version: 1.00
+  Net::Amazon::MechanicalTurk::Template:
+    file: lib/Net/Amazon/MechanicalTurk/Template.pm
+    version: 1.00
+  Net::Amazon::MechanicalTurk::Template::PerlTemplate:
+    file: lib/Net/Amazon/MechanicalTurk/Template/PerlTemplate.pm
+    version: 1.00
+  Net::Amazon::MechanicalTurk::Template::PerlTemplate::CompiledNameSpace:
+    file: lib/Net/Amazon/MechanicalTurk/Template/PerlTemplate.pm
+    version: 1.00
+  Net::Amazon::MechanicalTurk::Template::ReplacementTemplate:
+    file: lib/Net/Amazon/MechanicalTurk/Template/ReplacementTemplate.pm
+    version: 1.00
+  Net::Amazon::MechanicalTurk::Template::SubroutineTemplate:
+    file: lib/Net/Amazon/MechanicalTurk/Template/SubroutineTemplate.pm
+    version: 1.00
+  Net::Amazon::MechanicalTurk::Transport:
+    file: lib/Net/Amazon/MechanicalTurk/Transport.pm
+    version: 1.00
+  Net::Amazon::MechanicalTurk::Transport::RESTTransport:
+    file: lib/Net/Amazon/MechanicalTurk/Transport/RESTTransport.pm
+    version: 1.00
+  Net::Amazon::MechanicalTurk::XMLParser:
+    file: lib/Net/Amazon/MechanicalTurk/XMLParser.pm
+    version: 1.00
+generated_by: Module::Build version 0.2808
+meta-spec:
+  url: http://module-build.sourceforge.net/META-spec-v1.2.html
+  version: 1.2
