@@ -1,11 +1,14 @@
 #!/usr/bin/perl
 use strict;
 use warnings;
-use Test::More tests => 12;
+use Test::More;
 BEGIN { push(@INC, "lib", "t"); }
 use TestHelper;
 
 my $mturk = TestHelper->new;
+
+plan tests => 13;
+ok( $mturk, "Created client");
 
 my $response;
 

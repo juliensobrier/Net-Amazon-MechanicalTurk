@@ -22,11 +22,11 @@ Net::Amazon::MechanicalTurk - Amazon Mechanical Turk SDK for Perl
 
 =head1 VERSION
 
-Version 1.0
+Version 1.01
 
 =cut
 
-our $VERSION = '1.00';
+our $VERSION = '1.01';
 
 =head1 CONFIGURATION
 
@@ -122,7 +122,7 @@ Module for MechanicalTurk API.
 
 =head1 ERROR HANDLING
 
-Most methods indicate an error condition through dia or Carp::croak.
+Most methods indicate an error condition through die or Carp::croak.
 This is similar to throwing an exception in other languages.
 To catch an error, use eval:
 

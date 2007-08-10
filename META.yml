@@ -1,6 +1,6 @@
 ---
 name: Net-Amazon-MechanicalTurk
-version: 1.0
+version: 1.01
 author: []
 abstract: Amazon Mechanical Turk SDK for Perl
 license: open_source
@@ -17,7 +17,7 @@ recommends:
 provides:
   Net::Amazon::MechanicalTurk:
     file: lib/Net/Amazon/MechanicalTurk.pm
-    version: 1.00
+    version: 1.01
   Net::Amazon::MechanicalTurk::BaseObject:
     file: lib/Net/Amazon/MechanicalTurk/BaseObject.pm
     version: 1.00

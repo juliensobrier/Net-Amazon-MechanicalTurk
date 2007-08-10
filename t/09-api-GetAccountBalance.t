@@ -1,11 +1,14 @@
 #!/usr/bin/perl
 use strict;
 use warnings;
-use Test::More tests => 2;
+use Test::More;
 BEGIN { push(@INC, "lib", "t"); }
 use TestHelper;
 
 my $mturk = TestHelper->new;
+
+plan tests => 3;
+ok( $mturk, "Created Client" );
 
 my $result = $mturk->GetAccountBalance();
 print $result->toString, "\n";

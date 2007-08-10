@@ -5,6 +5,8 @@ use Test::More;
 BEGIN { push(@INC, "lib", "t"); }
 use TestHelper;
 
+my $mturk = TestHelper->new;
+
 if (!$ENV{MTURK_TEST_WRITABLE}) {
     plan skip_all => "Set environment variable MTURK_TEST_WRITABLE=1 to enable tests which have side-effects.";
 }
@@ -54,8 +56,6 @@ sub findAllHITs {
     
     ok(!$failed, "SearchHITsAll with PageSize $pageSize");
 }
-
-my $mturk = TestHelper->new;
 
 #require Net::Amazon::MechanicalTurk::Transport::RESTTransport;
 #Net::Amazon::MechanicalTurk->debug(\*STDOUT);

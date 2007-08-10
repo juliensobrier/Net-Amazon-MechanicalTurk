@@ -1,13 +1,14 @@
 #!/usr/bin/perl
 use strict;
 use warnings;
-use Test::More tests => 4;
+use Test::More;
 BEGIN { push(@INC, "lib", "t"); }
 use TestHelper;
 
 my $mturk = TestHelper->new;
-ok( $mturk, "Created client");
 
+plan tests => 4;
+ok( $mturk, "Created client");
 
 my $reviewable = $mturk->GetReviewableHITs();
 ok( $reviewable, "Got Reviewable HITs");

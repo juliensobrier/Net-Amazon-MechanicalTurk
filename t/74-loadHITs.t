@@ -4,6 +4,9 @@ use warnings;
 use Test::More;
 BEGIN { push(@INC, "lib", "t"); }
 use Net::Amazon::MechanicalTurk;
+use TestHelper;
+
+my $mturk = TestHelper->new;
 
 if (!$ENV{MTURK_TEST_WRITABLE}) {
     plan skip_all => "Set environment variable MTURK_TEST_WRITABLE=1 to enable tests which have side-effects.";
@@ -34,8 +37,6 @@ sub preview {
     my ($hitProps) = @_;
     print "Generated Question:\n", $hitProps->{Question}, "\n";
 }
-
-my $mturk = Net::Amazon::MechanicalTurk->new;
 
 my $hitInput = [
     { question => 'Where are you now?' },

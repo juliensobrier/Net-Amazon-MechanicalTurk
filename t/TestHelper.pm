@@ -9,7 +9,17 @@ our @ISA = qw{ Net::Amazon::MechanicalTurk };
 sub init {
     my $self = shift;
     $self->serviceUrl('http://mechanicalturk.sandbox.amazonaws.com');
-    $self->SUPER::init(@_);
+    eval {
+      $self->SUPER::init(@_); 
+    };
+    if ($@) {
+      if ($@ =~ m/^Missing value for/) {
+        plan skip_all => "Configure Amazon AWS Authentication to enable tests against Mechanical Turk Sandbox\n" . $@;
+      } 
+      else {
+        die $@
+      }
+    }
 }
 
 sub sampleQuestion {

@@ -6,6 +6,9 @@ BEGIN { push(@INC, "lib", "t"); }
 use Net::Amazon::MechanicalTurk;
 use Net::Amazon::MechanicalTurk::Command::LoadHITs;
 use Net::Amazon::MechanicalTurk::Command::UpdateHITs;
+use TestHelper;
+
+my $mturk = TestHelper->new;
 
 if (!$ENV{MTURK_TEST_WRITABLE}) {
     plan skip_all => "Set environment variable MTURK_TEST_WRITABLE=1 to enable tests which have side-effects.";
@@ -31,8 +34,6 @@ sub renderQuestion {
 </QuestionForm>
 END_XML
 }
-
-my $mturk = Net::Amazon::MechanicalTurk->new;
 
 my $hitInput = [
     { question => 'Where are you now?' },
