@@ -4,7 +4,7 @@ use warnings;
 use Net::Amazon::MechanicalTurk::Template::ReplacementTemplate;
 use Net::Amazon::MechanicalTurk::DelimitedWriter;
 
-our $VERSION = '1.00';
+our $VERSION = '1.01_01';
 
 =head1 NAME
 
@@ -25,7 +25,7 @@ my $CREATE_HITTYPE_PROPERTY_ALIASES = reverseLookup({
     AutoApprovalDelayInSeconds  => [qw{ autoapprovaldelayinseconds autoapprovaldelay }],
     AssignmentDurationInSeconds => [qw{ assignmentdurationinseconds assignmentduration }],
     Reward                      => [qw{ reward }],
-    QualificationRequirements   => [qw{ qualificationrequirements }]
+    QualificationRequirement    => [qw{ qualificationrequirement }]
 });
 
 my $CREATE_HIT_PROPERTY_ALIASES = reverseLookup({

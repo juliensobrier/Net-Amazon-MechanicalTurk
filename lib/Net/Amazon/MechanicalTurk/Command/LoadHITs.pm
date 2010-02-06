@@ -2,6 +2,7 @@ package Net::Amazon::MechanicalTurk::Command::LoadHITs;
 use strict;
 use warnings;
 use Carp;
+use Data::Dumper;
 use IO::File;
 use Net::Amazon::MechanicalTurk::BulkSupport;
 use Net::Amazon::MechanicalTurk::DataStructure;
@@ -11,7 +12,7 @@ use Net::Amazon::MechanicalTurk::Template;
 use Net::Amazon::MechanicalTurk::Template::ReplacementTemplate;
 use Net::Amazon::MechanicalTurk::DelimitedWriter;
 
-our $VERSION = '1.00';
+our $VERSION = '1.01_01';
 
 =head1 NAME
 
@@ -336,11 +337,11 @@ sub loadHITs {
         if ($mturk->request) {
             $message .= "\nLast operation called " . $mturk->request->{Operation} . ".\n";
             $message .= "\nDump of call parameters:\n" .
-                formatDataStructure($mturk->request, 4) . "\n";
+                Dumper($mturk->request, 4) . "\n";
         }
         if ($mturk->response) {
             $message .= "\nDump of response:\n" .
-                formatDataStructure($mturk->response->fullResult, 4) . "\n";
+                Dumper($mturk->response->fullResult, 4) . "\n";
         }
         Carp::croak($message);
     }

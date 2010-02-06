@@ -6,7 +6,7 @@ use IO::File;
 use Carp;
 use DBI;
 
-our $VERSION = '1.00';
+our $VERSION = '1.01_01';
 
 our @ISA = qw{ Net::Amazon::MechanicalTurk::RowData };
 

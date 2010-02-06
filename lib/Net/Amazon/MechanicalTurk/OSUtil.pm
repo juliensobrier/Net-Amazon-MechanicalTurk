@@ -1,6 +1,6 @@
 package Net::Amazon::MechanicalTurk::OSUtil;
 
-our $VERSION = '1.00';
+our $VERSION = '1.01_01';
 
 sub homeDirectory {
     my $homeDir;

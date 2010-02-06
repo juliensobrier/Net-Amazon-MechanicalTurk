@@ -1,5 +1,12 @@
 Revision history for Net-Amazon-MechanicalTurk
 
+1.01_01	(bdfoy) Fri Feb  5 19:47:13 CST 2010
+	+ Applied patch from Dave Viner (http://daveviner.blogspot.com/2009/12/amazon-mechanical-turk-perl-library.html)
+	+ Use DBD::SQLite instead of DBD::SQLite2
+	+ Fixes packageExists
+	+ fix RT #38110: BulkSupport QualificationRequirements
+	+ fix RT #38209: LoadHITs.pm calls a non-existant subroutine
+	
 1.01    2007-08-09
         BugFix: Skip tests that talk to Sandbox if Authentication information has not been supplied
 

@@ -4,7 +4,7 @@ use warnings;
 use Carp;
 use IO::File;
 
-our $VERSION = '1.00';
+our $VERSION = '1.01_01';
 
 use constant USE_QUALIFIED_ATTRIBUTE_NAMES => 1;
 

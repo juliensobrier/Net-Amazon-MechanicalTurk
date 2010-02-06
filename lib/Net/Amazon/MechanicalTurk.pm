@@ -26,7 +26,7 @@ Version 1.01
 
 =cut
 
-our $VERSION = '1.01';
+our $VERSION = '1.01_01';
 
 =head1 CONFIGURATION
 

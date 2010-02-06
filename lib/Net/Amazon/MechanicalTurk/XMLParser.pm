@@ -8,7 +8,7 @@ use Net::Amazon::MechanicalTurk::ModuleUtil;
 use Net::Amazon::MechanicalTurk::IOUtil;
 use IO::File;
 
-our $VERSION = '1.00';
+our $VERSION = '1.01_01';
 
 our @ISA = qw{ Net::Amazon::MechanicalTurk::BaseObject };
 our @XML_MODULES = qw{

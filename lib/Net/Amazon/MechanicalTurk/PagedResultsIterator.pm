@@ -4,7 +4,7 @@ use strict;
 use Carp;
 use Net::Amazon::MechanicalTurk::BaseObject;
 
-our $VERSION = '1.00';
+our $VERSION = '1.01_01';
 
 our @ISA = qw{ Net::Amazon::MechanicalTurk::BaseObject };
 our %META_RESULT_FIELDS = (

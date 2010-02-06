@@ -6,7 +6,7 @@ use IO::File;
 use IO::String;
 use Net::Amazon::MechanicalTurk::Template;
 
-our $VERSION = '1.00';
+our $VERSION = '1.01_01';
 
 our @ISA = qw{ Net::Amazon::MechanicalTurk::Template };
 

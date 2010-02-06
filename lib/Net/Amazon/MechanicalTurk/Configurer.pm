@@ -8,7 +8,7 @@ use Net::Amazon::MechanicalTurk::Constants ':ALL';
 use Net::Amazon::MechanicalTurk::OSUtil;
 use Net::Amazon::MechanicalTurk::Properties;
 
-our $VERSION = '1.00';
+our $VERSION = '1.01_01';
 
 our @ISA = qw{ Exporter };
 our @EXPORT = qw { configure };

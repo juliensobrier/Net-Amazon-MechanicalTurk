@@ -4,7 +4,7 @@ use warnings;
 use Carp;
 use Net::Amazon::MechanicalTurk::RowData;
 
-our $VERSION = '1.00';
+our $VERSION = '1.01_01';
 
 our @ISA = qw{ Net::Amazon::MechanicalTurk::RowData };
 

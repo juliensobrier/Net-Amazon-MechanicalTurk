@@ -4,7 +4,7 @@ use warnings;
 use IO::Dir;
 use Carp;
 
-our $VERSION = '1.00';
+our $VERSION = '1.01_01';
 
 sub listSubmodules {
     my ($class, $package) = @_;
@@ -29,17 +29,21 @@ sub listSubmodules {
 }
 
 sub packageExists {
-    my ($class, $package) = @_;
+    my ($class, $package, $moduleFile) = @_;
+    
+    if (defined($moduleFile) && exists($INC{$moduleFile})) {
+        return 1;
+    }
     # Symbol table black magic
     no strict 'refs';
-    return defined %{*{"${package}::"}};
+    return scalar(keys(%{*{"${package}::"}}));
 }
 
 sub require {
     my ($class, $module) = @_;
-    if (!$class->packageExists($module)) {
         my $moduleFile = $module . ".pm";
         $moduleFile =~ s/::/\//g;
+    if (!$class->packageExists($module, $moduleFile)) {
         require $moduleFile;
     }
 }

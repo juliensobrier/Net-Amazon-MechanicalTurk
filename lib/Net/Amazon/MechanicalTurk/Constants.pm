@@ -3,7 +3,7 @@ use strict;
 use warnings;
 use Exporter;
 
-our $VERSION = '1.00';
+our $VERSION = '1.01_01';
 
 BEGIN {
     use Exporter ();

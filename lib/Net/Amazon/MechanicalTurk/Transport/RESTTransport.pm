@@ -7,7 +7,7 @@ use Net::Amazon::MechanicalTurk::Transport;
 use Net::Amazon::MechanicalTurk::DataStructure;
 use LWP::UserAgent;
 
-our $VERSION = '1.00';
+our $VERSION = '1.01_01';
 
 our @ISA = qw{ Net::Amazon::MechanicalTurk::Transport };
 
