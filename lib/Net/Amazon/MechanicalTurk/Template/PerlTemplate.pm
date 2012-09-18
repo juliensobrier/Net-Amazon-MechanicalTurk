@@ -6,7 +6,7 @@ use IO::File;
 use IO::String;
 use Net::Amazon::MechanicalTurk::Template;
 
-our $VERSION = '1.01_01';
+our $VERSION = '1.00';
 
 our @ISA = qw{ Net::Amazon::MechanicalTurk::Template };
 
@@ -50,7 +50,7 @@ sub merge {
 
 package Net::Amazon::MechanicalTurk::Template::PerlTemplate::CompiledNameSpace;
 
-our $VERSION = '1.01_01';
+our $VERSION = '1.00';
 
 # provides a package to be used for evaluating code.
 # A perl template may declare subs.  If they are not qualified they will end up 

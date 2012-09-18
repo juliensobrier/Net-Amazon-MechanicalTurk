@@ -121,3 +121,4 @@ samples/removeAllHITs/removeAllHITs.pl
 samples/simple_survey/README.txt
 samples/simple_survey/SimpleSurvey.pl
 samples/simple_survey/simple_survey.question
+META.json                                Module JSON meta-data (added by MakeMaker)

@@ -4,7 +4,7 @@ use warnings;
 use IO::File;
 use Carp;
 
-our $VERSION = '1.01_01';
+our $VERSION = '1.00';
 
 sub readContents {
     my ($class, $io) = @_;

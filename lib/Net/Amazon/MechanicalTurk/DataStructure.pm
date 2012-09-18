@@ -2,7 +2,7 @@ package Net::Amazon::MechanicalTurk::DataStructure;
 use strict;
 use warnings;
 
-our $VERSION = '1.01_01';
+our $VERSION = '1.00';
 
 sub wrap {
     my ($class, $data) = @_;

@@ -11,7 +11,7 @@ use Net::Amazon::MechanicalTurk::Template;
 use Net::Amazon::MechanicalTurk::Template::ReplacementTemplate;
 use Net::Amazon::MechanicalTurk::DelimitedWriter;
 
-our $VERSION = '1.01_01';
+our $VERSION = '1.00';
 
 =head1 NAME
 

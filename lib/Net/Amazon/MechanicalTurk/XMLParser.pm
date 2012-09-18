@@ -8,7 +8,7 @@ use Net::Amazon::MechanicalTurk::ModuleUtil;
 use Net::Amazon::MechanicalTurk::IOUtil;
 use IO::File;
 
-our $VERSION = '1.01_01';
+our $VERSION = '1.00';
 
 our @ISA = qw{ Net::Amazon::MechanicalTurk::BaseObject };
 our @XML_MODULES = qw{
@@ -33,7 +33,7 @@ sub init {
 sub parseURL {
     my ($self, $url) = @_;
     require LWP::UserAgent;
-    my $userAgent = LWP::UserAgent->new;
+    my $userAgent = LWP::UserAgent->new(ssl_opts => {verify_hostname => 1});
     # Not available on all LWP's
     #$userAgent->default_headers->push_header("Connection" => "close");
     my $response = $userAgent->get($url);

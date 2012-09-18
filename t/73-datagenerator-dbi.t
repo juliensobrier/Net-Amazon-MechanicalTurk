@@ -8,10 +8,10 @@ use Net::Amazon::MechanicalTurk::RowData::SQLRowData;
 
 eval {
     require DBI;
-    require DBD::SQLite; 
+    require DBD::SQLite2; 
 };
 if ($@) {
-    plan skip_all => "SQLite not installed.";
+    plan skip_all => "SQLite2 not installed.";
 }
 else {
     plan tests => 2; 
@@ -21,7 +21,7 @@ else {
 #-----------------------
 my $dbfile = "t/data/test.db";
 unlink($dbfile) if (-f $dbfile);
-my $dbh = DBI->connect("dbi:SQLite:dbname=${dbfile}","","", {
+my $dbh = DBI->connect("dbi:SQLite2:dbname=${dbfile}","","", {
     RaiseError => 1,
     AutoCommit => 1
 });
@@ -42,7 +42,7 @@ my $sth = $dbh->prepare(qq{
 foreach my $id (1..30) {
     $sth->execute($id, rand(), scalar localtime());
 }
-$sth->finish();
+
 
 # Actual test
 #----------------------

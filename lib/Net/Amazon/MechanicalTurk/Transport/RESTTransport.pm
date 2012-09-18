@@ -5,9 +5,14 @@ use Net::Amazon::MechanicalTurk;
 use Net::Amazon::MechanicalTurk::BaseObject;
 use Net::Amazon::MechanicalTurk::Transport;
 use Net::Amazon::MechanicalTurk::DataStructure;
-use LWP::UserAgent;
+use LWP 6;
+use LWP::UserAgent 6;
+use LWP::Protocol::https 6;
+use HTTP::Request::Common;
+use Mozilla::CA;
+use Net::SSLeay 1.33;
 
-our $VERSION = '1.01_01';
+our $VERSION = '1.00';
 
 our @ISA = qw{ Net::Amazon::MechanicalTurk::Transport };
 
@@ -20,7 +25,7 @@ sub init {
     $self->setAttributes(@_);
     my $softwareName = "MTurkPerlSDK/" . $Net::Amazon::MechanicalTurk::VERSION;
     if (!defined($self->userAgent)) {
-        $self->userAgent(LWP::UserAgent->new);
+        $self->userAgent(LWP::UserAgent->new());
         $self->userAgent->agent(
             $softwareName .
             " " .
@@ -34,7 +39,7 @@ sub init {
 
 sub call {
     my ($self, $client, $operation, $params) = @_;
-    
+
     my $httpParams = Net::Amazon::MechanicalTurk::DataStructure->toProperties($params);
 
     if ($self->debug) {
@@ -44,7 +49,17 @@ sub call {
         }
     }
 
-    my $response = $self->userAgent->post($client->serviceUrl, $httpParams); 
+    my $hostname = 'invalid';
+    if($client->serviceUrl =~ /([^:]*:\/\/)?([^\/]+\.[^\/]+)/g) {
+      $hostname = $2;
+    }
+    if($hostname eq 'invalid') {
+      die "Invalid service url"
+    }
+
+    my $request = POST $client->serviceUrl, $httpParams ;
+    $request->header("If-SSL-Cert-Subject" => "/CN=$hostname");
+    my $response = $self->userAgent->request($request);
 
     if ($self->debug) {
         $self->debugMessage("HTTP Response " . $response->status_line);

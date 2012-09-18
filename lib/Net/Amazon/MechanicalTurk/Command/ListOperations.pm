@@ -2,7 +2,7 @@ package Net::Amazon::MechanicalTurk::Command::ListOperations;
 use strict;
 use warnings;
 
-our $VERSION = '1.01_01';
+our $VERSION = '1.00';
 
 =head1 NAME
 
@@ -27,7 +27,7 @@ sub listOperations {
     my $mturk = shift;
     my $wsdlUrl = shift;
     if (!defined($wsdlUrl)) {
-        $wsdlUrl = "http://mechanicalturk.amazonaws.com/AWSMechanicalTurk/" . $mturk->serviceVersion . "/AWSMechanicalTurkRequester.wsdl";
+        $wsdlUrl = "https://mechanicalturk.amazonaws.com/AWSMechanicalTurk/" . $mturk->serviceVersion . "/AWSMechanicalTurkRequester.wsdl";
     }
     my $parser = Net::Amazon::MechanicalTurk::XMLParser->new;
     my $wsdl = $parser->parseURL($wsdlUrl);

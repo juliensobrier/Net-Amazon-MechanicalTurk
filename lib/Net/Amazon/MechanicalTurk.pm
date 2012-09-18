@@ -22,11 +22,11 @@ Net::Amazon::MechanicalTurk - Amazon Mechanical Turk SDK for Perl
 
 =head1 VERSION
 
-Version 1.01
+Version 1.02
 
 =cut
 
-our $VERSION = '1.01_01';
+our $VERSION = '1.02';
 
 =head1 CONFIGURATION
 
@@ -55,7 +55,7 @@ Module for MechanicalTurk API.
 
     # Create a new MechTurk client without using mturk.properties
     my $mturk = Net::Amazon::MechanicalTurk->new(
-        serviceUrl     => 'http://mechanicalturk.sandbox.amazonaws.com/?Service=AWSMechanicalTurkRequester',
+        serviceUrl     => 'https://mechanicalturk.sandbox.amazonaws.com/?Service=AWSMechanicalTurkRequester',
         serviceVersion => '2007-06-21',
         accessKey      => '1AAAAA1A1AAAAA11AA11',
         secretKey      => '1aAaAAAAAAAA+aAaAaaaaaaAAA/AAAAAA1a1aAaa'

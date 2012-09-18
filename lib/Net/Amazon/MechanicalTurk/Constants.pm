@@ -3,7 +3,7 @@ use strict;
 use warnings;
 use Exporter;
 
-our $VERSION = '1.01_01';
+our $VERSION = '1.00';
 
 BEGIN {
     use Exporter ();
@@ -43,9 +43,9 @@ our $PROP_FILENAME            = "mturk.properties";
 our $PROP_ENVNAME             = "MTURK_CONFIG";
 our $PROP_GLOBAL_AUTH         = "auth";
 our $PROP_GLOBAL_DIR          = ".aws";
-our $DEFAULT_SERVICE_VERSION  = "2007-06-21";
-our $PRODUCTION_URL           = "http://mechanicalturk.amazonaws.com/?Service=AWSMechanicalTurkRequester";
-our $SANDBOX_URL              = "http://mechanicalturk.sandbox.amazonaws.com/?Service=AWSMechanicalTurkRequester";
+our $DEFAULT_SERVICE_VERSION  = "2011-10-01";
+our $PRODUCTION_URL           = "https://mechanicalturk.amazonaws.com/?Service=AWSMechanicalTurkRequester";
+our $SANDBOX_URL              = "https://mechanicalturk.sandbox.amazonaws.com/?Service=AWSMechanicalTurkRequester";
 our $PRODUCTION_REQUESTER_URL = "http://requester.mturk.com";
 our $SANDBOX_REQUESTER_URL    = "http://requestersandbox.mturk.com";
 our $PRODUCTION_WORKER_URL    = "http://www.mturk.com";

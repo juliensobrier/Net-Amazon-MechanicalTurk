@@ -4,7 +4,7 @@ use warnings;
 use Net::Amazon::MechanicalTurk::QAPValidator;
 use Carp;
 
-our $VERSION = '1.01_01';
+our $VERSION = '1.00';
 
 #
 # Extension method which hooks the CreateHIT api call

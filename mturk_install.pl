@@ -12,6 +12,8 @@ our %MODULES = (
         'MIME::Base64',
         'Digest::HMAC_SHA1',
         'LWP',
+        'LWP::Protocol::https',
+        'Mozilla::CA',
         'URI::Escape'
     ],
     optional => [
@@ -122,7 +124,7 @@ sub build {
 
 sub build_mm { # Make::Maker
     print "\n\nInitializing MechanicalTurk build....\n";
-    if (system("\"$Config{perlpath}\" Makfile.PL")) {
+    if (system("\"$Config{perlpath}\" Makefile.PL")) {
         die "Build initialization failed.";
     }
     print "\n\nBuilding MechanicalTurk ....\n";

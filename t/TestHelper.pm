@@ -8,7 +8,7 @@ our @ISA = qw{ Net::Amazon::MechanicalTurk };
 
 sub init {
     my $self = shift;
-    $self->serviceUrl('http://mechanicalturk.sandbox.amazonaws.com');
+    $self->serviceUrl('https://mechanicalturk.sandbox.amazonaws.com');
     eval {
       $self->SUPER::init(@_); 
     };

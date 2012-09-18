@@ -3,7 +3,7 @@ use strict;
 use warnings;
 use Net::Amazon::MechanicalTurk::BaseObject;
 
-our $VERSION = '1.01_01';
+our $VERSION = '1.00';
 
 our @ISA = qw{ Net::Amazon::MechanicalTurk::BaseObject };
 

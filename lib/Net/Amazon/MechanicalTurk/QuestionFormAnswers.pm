@@ -5,7 +5,7 @@ use Net::Amazon::MechanicalTurk::DataStructure;
 use Net::Amazon::MechanicalTurk::XMLParser;
 use URI::Escape;
 
-our $VERSION = '1.01_01';
+our $VERSION = '1.00';
 
 our @ISA = qw{ Net::Amazon::MechanicalTurk::BaseObject };
 

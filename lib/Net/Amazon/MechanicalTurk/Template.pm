@@ -8,7 +8,7 @@ use Net::Amazon::MechanicalTurk::IOUtil;
 use IO::File;
 use IO::Dir;
 
-our $VERSION = '1.01_01';
+our $VERSION = '1.00';
 
 our @ISA = qw{ Net::Amazon::MechanicalTurk::BaseObject };
 our %EXTENSION_MAPPINGS;

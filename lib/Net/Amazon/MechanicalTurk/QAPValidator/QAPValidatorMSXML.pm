@@ -5,7 +5,7 @@ use Win32::OLE;
 use Carp;
 use Net::Amazon::MechanicalTurk::QAPValidator;
 
-our $VERSION = '1.01_01';
+our $VERSION = '1.00';
 
 our @ISA = qw{ Net::Amazon::MechanicalTurk::QAPValidator };
 

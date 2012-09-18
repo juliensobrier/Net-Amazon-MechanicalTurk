@@ -4,7 +4,7 @@ use warnings;
 use Carp;
 use Net::Amazon::MechanicalTurk::QuestionFormAnswers;
 
-our $VERSION = '1.01_01';
+our $VERSION = '1.00';
 
 =head1 NAME
 

@@ -11,12 +11,15 @@ sub has_module {
 }
 
 my %requires = (
-    'Test::More'        => 0,
-    'LWP'               => 0,
-    'MIME::Base64'      => 0,
-    'Digest::HMAC_SHA1' => 0,
-    'URI::Escape'       => 0,
-    'perl'              => '5.6.0'
+    'Test::More'            => 0,
+    'LWP'                   => 6,
+    'LWP::Protocol::https'  => 6,
+    'Net::SSLeay'           => 1.33,
+    'Mozilla::CA'           => 0,
+    'MIME::Base64'          => 0,
+    'Digest::HMAC_SHA1'     => 0,
+    'URI::Escape'           => 0,
+    'perl'                  => '5.6.0'
 );
 
 my %recommends = (
