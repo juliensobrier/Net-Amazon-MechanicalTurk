@@ -32,7 +32,8 @@ sub packageExists {
     my ($class, $package) = @_;
     # Symbol table black magic
     no strict 'refs';
-    return defined %{*{"${package}::"}};
+#     return defined %{*{"${package}::"}};
+		return %{*{"${package}::"}};
 }
 
 sub require {
